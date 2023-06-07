@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
-const Continent = require('./Continent');
 
 const Country = sequelize.define('country', {
     name: {
@@ -20,8 +19,5 @@ const Country = sequelize.define('country', {
         allowNull: false
     },
 });
-
-Country.belongsTo(Continent)
-Continent.hasMany(Country)
 
 module.exports = Country;

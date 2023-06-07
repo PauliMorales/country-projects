@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
-const Country = require('./Country');
+
 
 const City = sequelize.define('city', {
     name: {
@@ -17,10 +17,5 @@ const City = sequelize.define('city', {
     },
     //countryId
 });
-
-City.belongsTo(Country)
-Country.hasMany(City)
-
-
 
 module.exports = City;
