@@ -21,4 +21,6 @@ const City = sequelize.define('city', {
 City.belongsTo(Country)
 Country.hasMany(City)
 
+
+
 module.exports = City;
